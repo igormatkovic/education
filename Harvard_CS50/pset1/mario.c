@@ -28,11 +28,16 @@ int main(void)
             printf("Retry:");
         }
 		
-        height = GetInt();git 
+        height = GetInt(); 
+        
+        if (height == 0)
+        {
+            return 0;
+        }
 	} 
 	while (height < 1 || height > 23);
 
-    for(int i = 0; i < height; i++) 
+    for(int i = 1; i <= height; i++) 
     {
         piramidLines(i, height);
     }
@@ -45,13 +50,13 @@ void piramidLines(int blocks, int total)
 
     // Print out empty blocks first since the piramid is inverted
     int empty_blocks = total - blocks;
-
-    for(int i = 0; i <= empty_blocks; i++) 
+    
+    for(int i = 0; i < empty_blocks; i++) 
     {
-        printf(" ");
+        printf("%s", " ");
     }
 
-    for(int i = 0; i <= blocks; i++) 
+    for(int i = 0; i < blocks; i++) 
     {
         printf("#");
     }
