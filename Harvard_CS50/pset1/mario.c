@@ -28,7 +28,7 @@ int main(void)
             printf("Retry:");
         }
 		
-        height = GetInt();
+        height = GetInt();git 
 	} 
 	while (height < 1 || height > 23);
 
